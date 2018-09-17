@@ -1,0 +1,11 @@
+.body
+  = render partial: "chat-side"
+
+  .chat-main
+    = render partial: "chat-main-header"
+    .box
+      = render partial: 'message', collection: @messages
+    = render partial: "chat-main-footer"
+
+
+

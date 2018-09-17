@@ -1,0 +1,11 @@
+.message{ "data-message-id": "#{message.id}"}
+  .message__user-name
+    = message.user.name
+  .message__time
+    = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .message__text
+    - if message.content.present?
+      = message.content
+  .message__image
+    - if message.image.present?
+      = image_tag message.image.url
